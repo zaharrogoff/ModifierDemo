@@ -72,7 +72,7 @@ fun DemoScreen(modifier: Modifier = Modifier) {
     val secondModifier = Modifier.height(100.dp)
 
     Column(
-        Modifier.padding(20.dp),
+        modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
