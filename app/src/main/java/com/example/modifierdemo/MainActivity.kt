@@ -65,9 +65,11 @@ fun CustomImage(image: Int, modifier: Modifier = Modifier) {
 
 @Composable
 fun DemoScreen(modifier: Modifier = Modifier) {
-    val mymodifier = modifier
-        .padding(all = 10.dp)
+    val mymodifier = Modifier
         .border(width = 2.dp, color = Color.Black)
+        .padding(all = 10.dp)
+
+    val secondModifier = Modifier.height(100.dp)
 
     Column(
         Modifier.padding(20.dp),
@@ -76,7 +78,7 @@ fun DemoScreen(modifier: Modifier = Modifier) {
     ) {
         Text(
             "Hello Compose",
-            mymodifier,
+            mymodifier.then(secondModifier),
             fontSize = 40.sp,
             fontWeight = FontWeight.Bold
         )
